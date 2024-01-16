@@ -1,0 +1,12 @@
+---
+- name: loops demo play
+  hosts: 35.239.36.222
+  gather_facts: no
+  tasks:
+    - name: loop over all the software
+      debug:
+         msg: "This is software: {{ item }}"
+      loop:
+        - wget
+        - apache2
+        - telnet

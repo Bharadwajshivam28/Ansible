@@ -1,0 +1,16 @@
+---
+- name: switches demo play
+  hosts: 34.30.132.117
+  gather_facts: no
+  tasks:
+    - name: create a user
+      user:
+        name: joe3
+        state: present
+      become: yes
+    - name: task2
+      debug:
+        msg: "this is task 2"
+    - name: task3
+      debug:
+         msg: "this is task3" 
